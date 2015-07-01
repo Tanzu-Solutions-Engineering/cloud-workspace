@@ -1,0 +1,14 @@
+---
+applications:
+- name: sb-cities-service
+  memory: 800M
+  path: build/libs/cities-service-0.0.1-SNAPSHOT.jar
+  timeout: 180
+#  buildpack: sb-java-buildpack
+  services:
+  - sb-cities-db
+# - sb-logs
+# - app-dynamics
+# - sb-cities-service-autoscaler
+  env:
+      SPRING_PROFILES_ACTIVE: cloud

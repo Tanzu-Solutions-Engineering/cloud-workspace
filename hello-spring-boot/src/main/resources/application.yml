@@ -1,0 +1,12 @@
+greeting: Bonjour
+
+endpoints:
+  health:
+    sensitive: false
+
+---
+
+spring:
+  profiles: spanish
+
+greeting: Hola
