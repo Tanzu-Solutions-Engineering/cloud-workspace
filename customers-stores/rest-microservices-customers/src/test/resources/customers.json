@@ -1,12 +1,12 @@
-{ "firstname" : "Oliver",
-  "lastname" : "Gierke",
+{ "firstname" : "Sergiu",
+  "lastname" : "Bodiu",
   "address" : { 
-  	"street" : "625 Avenue of the Americas", 
-  	"city" : "New York", 
-  	"zipCode" : "10011", 
+  	"street" : "747 Howard St",
+  	"city" : "San Francisco",
+  	"zipCode" : "94103",
   	"location" : { 
-  		"longitude" : -73.995146, 
-  		"latitude" : 40.740337
+  		"longitude" : -122.40991539999999,
+  		"latitude" : 37.7726402
   	} 
   }
 }

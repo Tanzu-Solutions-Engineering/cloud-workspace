@@ -1,2 +1,0 @@
-# sb-cities
-Cities Demo
