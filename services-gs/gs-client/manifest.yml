@@ -1,0 +1,10 @@
+---
+applications:
+- name: gs-client
+  memory: 1024M
+  instances: 1
+  host: gs-client-${random-word}
+  path: build/libs/gs-client-0.0.1.jar
+  services:
+  - Eureka
+  - Hystrix

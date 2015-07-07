@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        maven { url "https://repo.spring.io/plugins-release/" }
+        maven { url "https://repo.spring.io/libs-release/" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.4.RELEASE")
+        classpath("io.spring.gradle:dependency-management-plugin:0.5.1.RELEASE")
+    }
+}
+
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "spring-boot"
+apply plugin: "io.spring.dependency-management"
+
+jar {
+    baseName = "gs-client"
+    version =  "0.0.1"
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-starter-parent:1.0.0.BUILD-SNAPSHOT"
+    }
+}
+
+dependencies {
+    compile("io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker")
+    compile("io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry")
+}
+
+repositories {
+    maven { url "https://repo.spring.io/libs-snapshot/" }
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.4"
+}

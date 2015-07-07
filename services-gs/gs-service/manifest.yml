@@ -1,0 +1,9 @@
+---
+applications:
+- name: gs-service
+  memory: 1024M
+  instances: 1
+  host: gs-service-${random-word}
+  path: build/libs/gs-service-0.0.1.jar
+  services:
+  - Eureka
