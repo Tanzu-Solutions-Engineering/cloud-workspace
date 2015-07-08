@@ -27,7 +27,7 @@ buildscript {
 
 // Apply versioning to all projects from versioning script.
 allprojects {
-	apply from: "$rootDir/gradle/versioning.gradle"
+	apply from: "$rootDir/versioning.gradle"
 }
 
 subprojects {
