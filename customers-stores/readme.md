@@ -14,6 +14,16 @@
 - Make sure [Spring Cloud CLI is installed] (https://github.com/spring-cloud/spring-cloud-cli)
 - To run the services, just execute "mvn spring-boot:run" in each project subfolder, and "spring run app.groovy" for the UI.
 
+## Install Spring CLI
+
+    > Note: You can download the "Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files" from Oracle, and follow instructions for installation (essentially replace the 2 policy files in the JRE lib/security directory with the ones that you downloaded).
+
+Download and install spring cloud cli
+
+    git clone git://github.com/spring-cloud/spring-cloud-cli.git
+    git checkout tags/v1.0.1.RELEASE
+    mvn install -s .settings.xml
+    
 To run it locally you can install mongo, rabbit and redis:
 
     brew install mongodb rabbitmq
@@ -26,3 +36,7 @@ To run mongodb
     
     $ mkdir -p /tmp/db    
     $ mongod --dbpath /tmp/db
+
+To run this locally 
+
+    

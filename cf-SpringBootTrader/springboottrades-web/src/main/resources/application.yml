@@ -1,11 +1,9 @@
 spring:
   profiles.active: local
   application:
-     name: webUI
+     name: web-sergiu
 eureka:
   client:
-    registerWithEureka: false
-    registryFetchIntervalSeconds: 10
     serviceUrl:
       defaultZone: http://${vcap.services.eureka-service.credentials.uri:127.0.0.1:8761}/eureka/
   instance:

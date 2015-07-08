@@ -1,0 +1,11 @@
+---
+memory: 384M
+instances: 1
+applications:
+# host: insert-${random-word}
+- name: configserver${random-word}
+  path: configserver/target/configserver-0.0.1-SNAPSHOT.jar
+- name: eureka${random-word}
+  path: eureka/target/eureka-0.0.1-SNAPSHOT.jar
+- name: hystrix-dashboard-${random-word}
+  path: hystrixdashboard/target/hystrixdashboard-0.0.1-SNAPSHOT.jar
