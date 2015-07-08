@@ -42,7 +42,8 @@ public class MarketService {
 	private RestTemplate restTemplate;
 	
 	private static List<String> symbolsIT = Arrays.asList("EMC", "ORCL", "IBM", "INTC", "AMD", "HPQ", "CSCO", "AAPL");
-	private static List<String> symbolsFS = Arrays.asList("JPM", "C", "MS", "BAC", "GS", "WFC","BK");
+	private static List<String> symbolsFS = Arrays.asList("JPM", "C", "CS");
+    //"BAC", "GS", "WFC","BK"
 	
 	private MarketSummary summary = new MarketSummary();
 	

@@ -1,0 +1,1 @@
+insert into ACCOUNT (id, address, passwd, userid, email, creditcard, fullname, creationdate, openbalance) values (1, "One @ Changi City", "password", "test", "test@pivotal.io", "", "Test User", "", "10000000.0");
