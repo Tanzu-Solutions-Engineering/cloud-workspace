@@ -23,6 +23,10 @@ Download and install spring cloud cli
     git clone git://github.com/spring-cloud/spring-cloud-cli.git
     git checkout tags/v1.0.1.RELEASE
     mvn install -s .settings.xml
+
+# How to Run
+    
+## Customer Stores   
     
 To run it locally you can install mongo, rabbit and redis:
 
@@ -39,4 +43,36 @@ To run mongodb
 
 To run this locally 
 
+    $ ./run.sh
+
+## Customer Stores User Interface
+
+Change to User interface directory
+
+    $ cd customers-stores-ui
+
+Right now the easiest way to run the UI is to use Spring Boot.
+
+    $ spring run app.groovy
     
+and visit [http://localhost:9900](http://localhost:9900).
+
+[Customer Stores UI](customers-stores-ui/README.md)
+
+## Deploy to Cloudfoundry
+
+Cloudfoundry tends to assume this app is a node.js app (because of all
+the javascript), so you need to package it carefully:
+
+    $ spring jar --exclude='+bower*,node*,Gruntfile.js,*.json' --include='dist/**' app.jar app.groovy
+
+Then
+
+    $ cf push customersui -p app.jar
+
+## Cleanup    
+To stop the processes runt this command    
+    
+    $ ./kill.sh
+    
+ 
